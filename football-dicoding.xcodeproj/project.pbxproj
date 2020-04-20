@@ -56,15 +56,11 @@
 		F47DC1EE244D593E00640974 /* football-dicoding */ = {
 			isa = PBXGroup;
 			children = (
+				F47DC206244D5C0800640974 /* Base */,
 				F47DC203244D599500640974 /* Model */,
 				F47DC204244D599900640974 /* View */,
 				F47DC205244D599C00640974 /* Controller */,
-				F47DC1EF244D593E00640974 /* AppDelegate.swift */,
-				F47DC1F1244D593E00640974 /* SceneDelegate.swift */,
-				F47DC1F3244D593E00640974 /* ViewController.swift */,
-				F47DC1F5244D593E00640974 /* Main.storyboard */,
 				F47DC1F8244D593F00640974 /* Assets.xcassets */,
-				F47DC1FA244D593F00640974 /* LaunchScreen.storyboard */,
 				F47DC1FD244D593F00640974 /* Info.plist */,
 			);
 			path = "football-dicoding";
@@ -80,6 +76,8 @@
 		F47DC204244D599900640974 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F47DC1FA244D593F00640974 /* LaunchScreen.storyboard */,
+				F47DC1F5244D593E00640974 /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -87,8 +85,18 @@
 		F47DC205244D599C00640974 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				F47DC1F3244D593E00640974 /* ViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		F47DC206244D5C0800640974 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				F47DC1EF244D593E00640974 /* AppDelegate.swift */,
+				F47DC1F1244D593E00640974 /* SceneDelegate.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
