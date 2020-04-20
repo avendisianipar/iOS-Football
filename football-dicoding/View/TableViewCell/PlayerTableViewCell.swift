@@ -26,7 +26,7 @@ class PlayerTableViewCell: UITableViewCell {
 
     func setData(photo: String, name: String, club: String) {
         nameLabel.text = name
-        clubLabel.text = club
+        clubLabel.text = "Club: \(club)"
         photoImageView.image = UIImage(named: photo)
         photoImageView.layer.cornerRadius = photoImageView.frame.height / 2
     }

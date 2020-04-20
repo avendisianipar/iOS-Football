@@ -17,7 +17,14 @@ class TopPlayerViewController: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "PlayerCell")
+                           forCellReuseIdentifier: "playerCell")
+    }
+    
+    private func toPlayerDetail(_ selectedPlayer: PlayerModel) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "playerDetail") as! PlayerDetailViewController
+        controller.player = selectedPlayer
+        navigationController?.pushViewController(controller, animated: true)
     }
 }
 
@@ -27,15 +34,16 @@ extension TopPlayerViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerTableViewCell
         let player = players[indexPath.row]
         cell.setData(photo: player.photo, name: player.name, club: player.club)
         
         return cell
     }
-    
 }
 
 extension TopPlayerViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        toPlayerDetail(players[indexPath.row])
+    }
 }

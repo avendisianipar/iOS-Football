@@ -12,4 +12,9 @@ struct PlayerModel {
     let name: String
     let club: String
     let photo: String
+    let fullName: String
+    let dob: String
+    let height: String
+    let position: String
+    let shortBio: String
 }
