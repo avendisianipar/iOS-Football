@@ -1,5 +1,5 @@
 //
-//  ProfileTableViewCell.swift
+//  PlayerTableViewCell.swift
 //  football-dicoding
 //
 //  Created by Avendi Sianipar on 20/4/20.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class PlayerTableViewCell: UITableViewCell {
 
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -23,7 +23,7 @@ class ProfileTableViewCell: UITableViewCell {
         separator.addLine(to: CGPoint(x: rect.width, y: rect.height))
         separator.strokePath()
     }
-    
+
     func setData(photo: String, name: String, club: String) {
         nameLabel.text = name
         clubLabel.text = club

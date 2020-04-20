@@ -9,22 +9,33 @@
 import UIKit
 
 class TopPlayerViewController: UIViewController {
-
+    
+    @IBOutlet private weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "PlayerCell")
+    }
+}
 
-        // Do any additional setup after loading the view.
+extension TopPlayerViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return players.count
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PlayerCell", for: indexPath) as! PlayerTableViewCell
+        let player = players[indexPath.row]
+        cell.setData(photo: player.photo, name: player.name, club: player.club)
+        
+        return cell
     }
-    */
+    
+}
 
+extension TopPlayerViewController: UITableViewDelegate {
+    
 }
