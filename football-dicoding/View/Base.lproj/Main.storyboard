@@ -29,7 +29,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Top Football Player" id="xgP-cI-Gxb"/>
+                    <navigationItem key="navigationItem" title="Top Football Player" id="xgP-cI-Gxb">
+                        <barButtonItem key="backBarButtonItem" title=" " id="Jhs-cz-O3b"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="v6P-AF-T0C" id="1v9-JW-xJl"/>
                     </connections>
@@ -219,6 +221,56 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="67b-KT-8We" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1876.8115942028987" y="126.5625"/>
+        </scene>
+        <!--My Profile View Controller-->
+        <scene sceneID="Amr-Js-dO9">
+            <objects>
+                <viewController storyboardIdentifier="myProfile" useStoryboardIdentifierAsRestorationIdentifier="YES" id="vvA-3t-5wo" customClass="MyProfileViewController" customModule="football_dicoding" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dbx-Pv-2OB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="WO5-qc-YNZ">
+                                <rect key="frame" x="157" y="285.5" width="100" height="165"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3GY-91-Oan">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="1zF-tt-ojO"/>
+                                            <constraint firstAttribute="width" constant="100" id="YFn-FF-bdJ"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQt-UQ-8D8">
+                                        <rect key="frame" x="21" y="105" width="58.5" height="31.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5V-20-lyb">
+                                        <rect key="frame" x="28.5" y="141.5" width="43" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WO5-qc-YNZ" firstAttribute="centerX" secondItem="Dbx-Pv-2OB" secondAttribute="centerX" id="8tG-5B-Av2"/>
+                            <constraint firstItem="WO5-qc-YNZ" firstAttribute="centerY" secondItem="Dbx-Pv-2OB" secondAttribute="centerY" constant="-80" id="CKh-iQ-g2c"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GKe-7q-zxm"/>
+                    </view>
+                    <connections>
+                        <outlet property="emailLabel" destination="A5V-20-lyb" id="ZwS-y6-ckS"/>
+                        <outlet property="nameLabel" destination="NQt-UQ-8D8" id="7Jb-iO-4Q6"/>
+                        <outlet property="profileImage" destination="3GY-91-Oan" id="JNJ-t0-tID"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cGU-Tn-95S" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2672.4637681159425" y="126.5625"/>
         </scene>
     </scenes>
 </document>

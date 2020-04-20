@@ -16,14 +16,27 @@ class TopPlayerViewController: UIViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil),
-                           forCellReuseIdentifier: "playerCell")
+        tableView.register(UINib(nibName: "PlayerTableViewCell", bundle: nil), forCellReuseIdentifier: "playerCell")
+        
+        let meBarButton = UIBarButtonItem(title: "Me", style: .plain, target: self, action: #selector(toMyProfile))
+        navigationItem.rightBarButtonItem = meBarButton
+        navigationController?.navigationBar.tintColor = .white
     }
-    
-    private func toPlayerDetail(_ selectedPlayer: PlayerModel) {
+}
+
+private extension TopPlayerViewController {
+    func toPlayerDetail(_ selectedPlayer: PlayerModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let controller = storyboard.instantiateViewController(identifier: "playerDetail") as! PlayerDetailViewController
         controller.player = selectedPlayer
+        controller.title = "Player Detail"
+        navigationController?.pushViewController(controller, animated: true)
+    }
+    
+    @objc func toMyProfile() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(identifier: "myProfile") as! MyProfileViewController
+        controller.title = "My Profile"
         navigationController?.pushViewController(controller, animated: true)
     }
 }
@@ -37,7 +50,7 @@ extension TopPlayerViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "playerCell", for: indexPath) as! PlayerTableViewCell
         let player = players[indexPath.row]
         cell.setData(photo: player.photo, name: player.name, club: player.club)
-        
+        cell.selectionStyle = .none
         return cell
     }
 }

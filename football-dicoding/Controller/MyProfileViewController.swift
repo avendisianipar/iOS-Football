@@ -10,21 +10,21 @@ import UIKit
 
 class MyProfileViewController: UIViewController {
 
+    @IBOutlet private weak var profileImage: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var emailLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setUpData()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension MyProfileViewController {
+    func setUpData() {
+        nameLabel.text = "Avendi"
+        emailLabel.text = "avendisianypar@gmail.com"
+        profileImage.image = UIImage(named: "avendi")
+        profileImage.layer.cornerRadius = profileImage.frame.height / 2
     }
-    */
-
 }
