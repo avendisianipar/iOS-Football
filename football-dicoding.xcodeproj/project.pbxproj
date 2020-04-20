@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		F47DC1F0244D593E00640974 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DC1EF244D593E00640974 /* AppDelegate.swift */; };
 		F47DC1F2244D593E00640974 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DC1F1244D593E00640974 /* SceneDelegate.swift */; };
-		F47DC1F4244D593E00640974 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DC1F3244D593E00640974 /* ViewController.swift */; };
 		F47DC1F7244D593E00640974 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47DC1F5244D593E00640974 /* Main.storyboard */; };
 		F47DC1F9244D593F00640974 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F47DC1F8244D593F00640974 /* Assets.xcassets */; };
 		F47DC1FC244D593F00640974 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F47DC1FA244D593F00640974 /* LaunchScreen.storyboard */; };
+		F485350F244D5F560001451A /* ProfileTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F485350D244D5F560001451A /* ProfileTableViewCell.swift */; };
+		F4853510244D5F560001451A /* ProfileTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F485350E244D5F560001451A /* ProfileTableViewCell.xib */; };
+		F4853512244D62AF0001451A /* TopPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4853511244D62AF0001451A /* TopPlayerViewController.swift */; };
+		F4853514244D62E40001451A /* PlayerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4853513244D62E40001451A /* PlayerDetailViewController.swift */; };
+		F4853516244D62EE0001451A /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4853515244D62EE0001451A /* MyProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F47DC1EC244D593E00640974 /* football-dicoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "football-dicoding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F47DC1EF244D593E00640974 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F47DC1F1244D593E00640974 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F47DC1F3244D593E00640974 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F47DC1F6244D593E00640974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F47DC1F8244D593F00640974 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F47DC1FB244D593F00640974 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F47DC1FD244D593F00640974 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F485350D244D5F560001451A /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		F485350E244D5F560001451A /* ProfileTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileTableViewCell.xib; sourceTree = "<group>"; };
+		F4853511244D62AF0001451A /* TopPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPlayerViewController.swift; sourceTree = "<group>"; };
+		F4853513244D62E40001451A /* PlayerDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailViewController.swift; sourceTree = "<group>"; };
+		F4853515244D62EE0001451A /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +84,7 @@
 		F47DC204244D599900640974 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F485350C244D5F270001451A /* TableViewCell */,
 				F47DC1FA244D593F00640974 /* LaunchScreen.storyboard */,
 				F47DC1F5244D593E00640974 /* Main.storyboard */,
 			);
@@ -85,7 +94,9 @@
 		F47DC205244D599C00640974 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				F47DC1F3244D593E00640974 /* ViewController.swift */,
+				F4853511244D62AF0001451A /* TopPlayerViewController.swift */,
+				F4853513244D62E40001451A /* PlayerDetailViewController.swift */,
+				F4853515244D62EE0001451A /* MyProfileViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +108,15 @@
 				F47DC1F1244D593E00640974 /* SceneDelegate.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		F485350C244D5F270001451A /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				F485350D244D5F560001451A /* ProfileTableViewCell.swift */,
+				F485350E244D5F560001451A /* ProfileTableViewCell.xib */,
+			);
+			path = TableViewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +178,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F47DC1FC244D593F00640974 /* LaunchScreen.storyboard in Resources */,
+				F4853510244D5F560001451A /* ProfileTableViewCell.xib in Resources */,
 				F47DC1F9244D593F00640974 /* Assets.xcassets in Resources */,
 				F47DC1F7244D593E00640974 /* Main.storyboard in Resources */,
 			);
@@ -170,8 +191,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F47DC1F4244D593E00640974 /* ViewController.swift in Sources */,
+				F4853516244D62EE0001451A /* MyProfileViewController.swift in Sources */,
+				F485350F244D5F560001451A /* ProfileTableViewCell.swift in Sources */,
 				F47DC1F0244D593E00640974 /* AppDelegate.swift in Sources */,
+				F4853512244D62AF0001451A /* TopPlayerViewController.swift in Sources */,
+				F4853514244D62E40001451A /* PlayerDetailViewController.swift in Sources */,
 				F47DC1F2244D593E00640974 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
